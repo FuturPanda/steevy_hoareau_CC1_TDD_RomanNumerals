@@ -52,4 +52,11 @@ describe('Number converter', () => {
     const convertedNumbers = inputNumbers.map(toRoman);
     expect(convertedNumbers).toStrictEqual(expectedResult);
   });
+
+  test('should return a roman letter with soustraction logic', () => {
+    const inputNumbers = [134, 259, 2999];
+    const expectedResult = ['CXXXIV', 'CCLIX', 'MMCMXCIX'];
+    const convertedNumbers = inputNumbers.map(toRoman);
+    expect(convertedNumbers).toStrictEqual(expectedResult);
+  });
 });

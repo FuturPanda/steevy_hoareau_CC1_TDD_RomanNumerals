@@ -21,6 +21,12 @@ export function toRoman(number: number): string {
         if (position == 4) return 'M'.repeat(multiplier);
         break;
       }
+      case '4': {
+        if (position == 1) return 'IV';
+        if (position == 2) return 'XL';
+        if (position == 3) return 'CD';
+        break;
+      }
       case '5': {
         if (position == 1) return 'V';
         if (position == 2) return 'L';
@@ -34,6 +40,12 @@ export function toRoman(number: number): string {
         if (position == 1) return 'V' + 'I'.repeat(extra);
         if (position == 2) return 'L' + 'X'.repeat(extra);
         if (position == 3) return 'D' + 'C'.repeat(extra);
+        break;
+      }
+      case '9': {
+        if (position == 1) return 'IX';
+        if (position == 2) return 'XC';
+        if (position == 3) return 'CM';
         break;
       }
       default:
